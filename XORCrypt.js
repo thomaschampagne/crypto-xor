@@ -1,0 +1,69 @@
+/**
+ * @author Thomas Champagne
+ * @description Simple mixing symetric cryptography node module based on XOR
+ * @see https://en.wikipedia.org/wiki/XOR_cipher
+ */
+
+var XORCrypt = {};
+
+/**
+ * @description Encode XOR method
+ * @param {string} plainString - Plain text data to be encoded
+ * @param {string} key - Crypt key used to XOR plainString
+ * @returns {string} Cypher text
+ */
+XORCrypt.encode = function encode(plainString, key) {
+
+    var cypher = '';
+
+    for (var i = 0; i < plainString.length; i++) {
+
+        // Find ascii code from key to be "xor"
+        var keyPointer = i % key.length;
+
+        // Convert char to int ASCII and "xor crypt" with int ASCII
+        var xorDec = (plainString[i]).charCodeAt(0) ^ (key[keyPointer]).charCodeAt(0);
+        xorDec = parseInt(xorDec);
+
+        // HEX convert
+        var xorHex = xorDec.toString(16);
+
+        // '0' Padding
+        xorHex = ('0' + xorHex).slice('-2');
+
+        // Append to cypher string
+        cypher += xorHex;
+    }
+
+    return cypher;
+};
+
+/**
+ * @description Decode XOR method
+ * @param {string} cypherString - Cypher string to be decoded
+ * @param {string} key - Crypt key used to XOR cypherString
+ * @returns {string} Plain text
+ */
+XORCrypt.decode = function decode(cypherString, key) {
+
+    var plainText = '';
+    var cypherArray = [];
+
+    // Group cypher by 2 hex char (16bits) into array
+    for (var i = 0; i < cypherString.length; i = i + 2) {
+        cypherArray.push(cypherString[i] + cypherString[i + 1]);
+
+    }
+
+    // XOR Decrypt with provided cypher text and key
+    for (var i = 0; i < cypherArray.length; i++) {
+        var hex = cypherArray[i];
+        var dec = parseInt(hex, 16);
+        var keyPointer = i % key.length;
+        var asciiCode = dec ^ (key[keyPointer]).charCodeAt(0);
+        plainText += String.fromCharCode(asciiCode);
+    }
+    return plainText;
+};
+
+module.exports = XORCrypt;
