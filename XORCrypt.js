@@ -22,17 +22,18 @@ XORCrypt.encode = function encode(plainString, key) {
         var keyPointer = i % key.length;
 
         // Convert char to int ASCII and "xor crypt" with int ASCII
-        var xorDec = (plainString[i]).charCodeAt(0) ^ (key[keyPointer]).charCodeAt(0);
-        xorDec = parseInt(xorDec);
+        var dec = (plainString[i]).charCodeAt(0) ^ (key[keyPointer]).charCodeAt(0);
+        dec = parseInt(dec);
 
         // HEX convert
-        var xorHex = xorDec.toString(16);
+        var hex = dec.toString(16);
+
 
         // '0' Padding
-        xorHex = ('0' + xorHex).slice('-2');
+        hex = ('00' + hex).slice('-2');
 
         // Append to cypher string
-        cypher += xorHex;
+        cypher += hex;
     }
 
     return cypher;
