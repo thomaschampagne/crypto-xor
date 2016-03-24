@@ -1,6 +1,6 @@
 {
   "name": "xorcrypt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple mixing symetric cryptography node module based on XOR",
   "main": "xorcrypt.js",
   "scripts": {
