@@ -4,7 +4,7 @@
  * @see https://en.wikipedia.org/wiki/XOR_cipher
  */
 
-var xorcrypt = {};
+var cryptoXor = {};
 
 /**
  * @description Encode XOR method
@@ -12,7 +12,7 @@ var xorcrypt = {};
  * @param {string} key - Crypt key used to XOR plainString
  * @returns {string} Cypher text
  */
-xorcrypt.encode = function encode(plainString, key) {
+cryptoXor.encode = function encode(plainString, key) {
 
     var cypher = '';
 
@@ -45,19 +45,19 @@ xorcrypt.encode = function encode(plainString, key) {
  * @param {string} key - Crypt key used to XOR cypherString
  * @returns {string} Plain text
  */
-xorcrypt.decode = function decode(cypherString, key) {
+cryptoXor.decode = function decode(cypherString, key) {
 
     var plainText = '';
     var cypherArray = [];
-
+    var i;
     // Group cypher by 2 hex char (16bits) into array
-    for (var i = 0; i < cypherString.length; i = i + 2) {
+    for (i = 0; i < cypherString.length; i = i + 2) {
         cypherArray.push(cypherString[i] + cypherString[i + 1]);
 
     }
 
     // XOR Decrypt with provided cypher text and key
-    for (var i = 0; i < cypherArray.length; i++) {
+    for (i = 0; i < cypherArray.length; i++) {
         var hex = cypherArray[i];
         var dec = parseInt(hex, 16);
         var keyPointer = i % key.length;
@@ -67,4 +67,4 @@ xorcrypt.decode = function decode(cypherString, key) {
     return plainText;
 };
 
-module.exports = xorcrypt;
+module.exports = cryptoXor;

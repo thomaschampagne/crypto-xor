@@ -1,24 +1,24 @@
 {
-  "name": "xorcrypt",
-  "version": "1.0.1",
-  "description": "Simple mixing symetric cryptography node module based on XOR",
-  "main": "xorcrypt.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thomaschampagne/xorcrypt.git"
-  },
-  "keywords": [
+    "name": "crypto-xor",
+    "version": "1.1.0",
+    "description": "Simple mixing symetric cryptography node module based on XOR",
+    "main": "crypto-xor.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thomaschampagne/crypto-xor.git"
+    },
+    "keywords": [
     "xor",
     "crypt",
     "symmetric"
   ],
-  "author": "Thomas Champagne <th.champagne@gmail.com> (http://thomaschampagne.github.io)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thomaschampagne/xorcrypt/issues"
-  },
-  "homepage": "https://github.com/thomaschampagne/xorcrypt#readme"
+    "author": "Thomas Champagne <th.champagne@gmail.com> (http://thomaschampagne.github.io)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thomaschampagne/crypto-xor/issues"
+    },
+    "homepage": "https://github.com/thomaschampagne/crypto-xor#readme"
 }

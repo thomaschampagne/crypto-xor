@@ -1,15 +1,15 @@
-# xorcrypt
+# crypto-xor
 Simple mixing symetric XOR cryptography node module
 
 ## Install
 ```bash
-npm install --save-dev xorcrypt
+npm install --save-dev crypto-xor
 ```
 
 ## Example use
 
 ```javascript
-var xorcrypt = require('xorcrypt');
+var crypto-xor = require('crypto-xor');
 
 var symmetricKey = '5_Gk>V!q9umG-dx4GK*V;j!_';
 
@@ -17,11 +17,11 @@ var plainText = 'I have a secret for you !';
 
 console.log('Plain Text: ' + plainText);
 
-var cypherText = xorcrypt.encode(plainText, symmetricKey);
+var cypherText = cryptoXor.encode(plainText, symmetricKey);
 
 console.log('Encoded: ' + cypherText);
 
-var decodedCypher = xorcrypt.decode(cypherText, symmetricKey);
+var decodedCypher = cryptoXor.decode(cypherText, symmetricKey);
 
 console.log('Decoded: ' + decodedCypher);
 ```
