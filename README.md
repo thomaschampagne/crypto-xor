@@ -9,7 +9,7 @@ npm install --save-dev crypto-xor
 ## Example use
 
 ```javascript
-var crypto-xor = require('crypto-xor');
+var cryptoXor = require('crypto-xor');
 
 var symmetricKey = '5_Gk>V!q9umG-dx4GK*V;j!_';
 
