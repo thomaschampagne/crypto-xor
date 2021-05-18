@@ -1,34 +1,33 @@
 # crypto-xor
-Simple mixing symetric XOR cryptography node module
+Simple mixing symmetric XOR cryptography node module
 
 ## Install
 ```bash
-npm install --save-dev crypto-xor
+npm install crypto-xor
 ```
 
-## Example use
+## Sample use
 
 ```javascript
-var cryptoXor = require('crypto-xor');
+import { cryptoXor } from 'crypto-xor';
 
-var symmetricKey = '5_Gk>V!q9umG-dx4GK*V;j!_';
+const symmetricKey = '5_Gk>V!q9umG-dx4GK*V;j!_';
 
-var plainText = 'I have a secret for you !';
+const plainText = 'I have a secret fo.gitignorer you !';
 
 console.log('Plain Text: ' + plainText);
 
-var cypherText = cryptoXor.encode(plainText, symmetricKey);
+const cypherText = cryptoXor.encode(plainText, symmetricKey);
 
 console.log('Encoded: ' + cypherText);
 
-var decodedCypher = cryptoXor.decode(cypherText, symmetricKey);
+const decodedCypher = cryptoXor.decode(cypherText, symmetricKey);
 
 console.log('Decoded: ' + decodedCypher);
 ```
 
-## Example output
+## Sample output
 ```
-$ node example.js
 Plain Text: I have a secret for you !
 Encoded: 7c7f2f0a48330110190608245f010c14212458764205547f14
 Decoded: I have a secret for you !

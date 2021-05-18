@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "CommonJS",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "allowJs": false,
+    "checkJs": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
