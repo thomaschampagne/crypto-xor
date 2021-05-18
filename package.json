@@ -1,13 +1,15 @@
 {
     "name": "crypto-xor",
-    "version": "2.0.0",
-    "description": "Simple mixing symmetric cryptography node module based on XOR",
+    "version": "2.1.0",
+    "description": "Simple symmetric XOR encryption library",
     "type": "module",
     "main": "lib/crypto-xor.js",
     "types": "lib/crypto-xor.d.ts",
     "scripts": {
-        "watch": "tsc --watch",
-        "build": "tsc",
+        "watch": "npm run clean && tsc --watch",
+        "build": "npm run clean && tsc",
+        "clean": "rimraf ./lib/",
+        "npm:publish": "npm run build && npm publish",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -19,13 +21,18 @@
         "crypt",
         "symmetric"
     ],
-    "author": "Thomas Champagne <th.champagne@gmail.com> (http://thomaschampagne.github.io)",
-    "license": "ISC",
+    "author": {
+        "email": "th.champagne@gmail.com",
+        "name": "Thomas Champagne",
+        "url": "https://thomaschampagne.github.io"
+    },
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/thomaschampagne/crypto-xor/issues"
     },
     "homepage": "https://github.com/thomaschampagne/crypto-xor#readme",
     "devDependencies": {
+        "rimraf": "^3.0.2",
         "typescript": "^4.2.4"
     }
 }
