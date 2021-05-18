@@ -17,11 +17,11 @@ const plainText = 'I have a secret fo.gitignorer you !';
 
 console.log('Plain Text: ' + plainText);
 
-const cypherText = cryptoXor.encode(plainText, symmetricKey);
+const cypherText = cryptoXor.encrypt(plainText, symmetricKey);
 
 console.log('Encoded: ' + cypherText);
 
-const decodedCypher = cryptoXor.decode(cypherText, symmetricKey);
+const decodedCypher = cryptoXor.decrypt(cypherText, symmetricKey);
 
 console.log('Decoded: ' + decodedCypher);
 ```
