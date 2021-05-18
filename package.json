@@ -1,7 +1,7 @@
 {
     "name": "crypto-xor",
-    "version": "1.1.0",
-    "description": "Simple mixing symetric cryptography node module based on XOR",
+    "version": "2.0.0",
+    "description": "Simple mixing symmetric cryptography node module based on XOR",
     "type": "module",
     "main": "lib/crypto-xor.js",
     "types": "lib/crypto-xor.d.ts",
