@@ -3,7 +3,7 @@
  * @description Simple symmetric XOR encryption module
  * @see https://en.wikipedia.org/wiki/XOR_cipher
  */
-export const cryptoXor = {
+export const CryptoXor = {
 
     /**
      * Encrypt XOR method
