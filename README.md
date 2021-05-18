@@ -1,5 +1,5 @@
 # crypto-xor
-Simple mixing symmetric XOR cryptography node module
+Simple symmetric XOR encryption library
 
 ## Install
 ```bash
