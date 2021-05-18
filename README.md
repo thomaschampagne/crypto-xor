@@ -1,6 +1,10 @@
 # crypto-xor
 Simple symmetric XOR encryption library
 
+No dependencies 
+
+Works in Browser and Node
+
 ## Install
 ```bash
 npm install crypto-xor
