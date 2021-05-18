@@ -1,6 +1,6 @@
 /**
  * @author Thomas Champagne
- * @description Simple mixing symetric cryptography node module based on XOR
+ * @description Simple symmetric XOR encryption module
  * @see https://en.wikipedia.org/wiki/XOR_cipher
  */
 export const cryptoXor = {
