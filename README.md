@@ -15,7 +15,7 @@ import { CryptoXor } from 'crypto-xor';
 
 const symmetricKey = '5_Gk>V!q9umG-dx4GK*V;j!_';
 
-const plainText = 'I have a secret fo.gitignorer you !';
+const plainText = 'I have a secret for you !';
 
 console.log('Plain Text: ' + plainText);
 
