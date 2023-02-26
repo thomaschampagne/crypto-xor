@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "CommonJS",
-    "declaration": true,
-    "declarationMap": true,
-    "outDir": "./lib",
-    "rootDir": "./src",
-    "allowJs": false,
-    "checkJs": false,
+    "target": "es2018",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
   }
 }

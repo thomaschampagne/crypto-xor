@@ -1,4 +1,7 @@
 # crypto-xor
+
+[![NPM version](https://img.shields.io/npm/v/crypto-xor?color=a1b858&label=version)](https://www.npmjs.com/package/crypto-xor)
+
 Simple symmetric XOR encryption library for Browser and Node.
 
 No dependencies required
