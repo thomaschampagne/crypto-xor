@@ -39,7 +39,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp && pnpm publish",
+    "release": "bumpp --tag %s && pnpm publish",
     "start": "esno src/index.ts",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit",
