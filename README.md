@@ -1,4 +1,9 @@
 # crypto-xor
+
+Simple symmetric XOR encryption library for Browser and Node.
+
+No dependencies required
+
 <!-- toc -->
 
 - [Install](#install)
