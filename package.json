@@ -1,12 +1,11 @@
 {
   "name": "crypto-xor",
   "type": "module",
-  "version": "3.0.0",
-  "packageManager": "pnpm@7.28.0",
+  "version": "0.1.0",
+  "packageManager": "pnpm@7.30.0",
   "description": "",
   "author": "Thomas Champagne <th.champagne@gmail.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/thomaschampagne",
   "homepage": "https://github.com/thomaschampagne/crypto-xor#readme",
   "repository": {
     "type": "git",
@@ -39,34 +38,37 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint .",
-    "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && pnpm publish",
     "start": "esno src/index.ts",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "readme:toc": "markdown-toc-gen update README.md",
+    "docs": "pnpm run readme:toc && typedoc src/index.ts",
+    "integrate": "pnpm install && pnpm run typecheck && pnpm run lint:fix && pnpm run test && pnpm run build && pnpm run docs",
+    "upgrade:libs": "ncu -u",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.35.3",
-    "@antfu/ni": "^0.20.0",
-    "@antfu/utils": "^0.7.2",
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
     "bumpp": "^9.0.0",
-    "eslint": "^8.35.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "esno": "^0.16.3",
-    "lint-staged": "^13.1.2",
-    "pnpm": "^7.28.0",
-    "rimraf": "^4.1.2",
-    "simple-git-hooks": "^2.8.1",
-    "typescript": "^4.9.5",
+    "husky": "^8.0.3",
+    "markdown-toc-gen": "^1.0.1",
+    "npm-check-updates": "^16.7.13",
+    "pnpm": "^7.30.0",
+    "prettier": "^2.8.5",
+    "typedoc": "^0.23.28",
+    "typescript": "^5.0.2",
     "unbuild": "^1.1.2",
-    "vite": "^4.1.4",
-    "vitest": "^0.28.5"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "npx eslint --fix"
+    "vite": "^4.2.0",
+    "vitest": "^0.29.3"
   }
 }
