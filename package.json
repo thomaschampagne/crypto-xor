@@ -12,7 +12,7 @@
     "url": "git+https://github.com/thomaschampagne/crypto-xor.git"
   },
   "bugs": "https://github.com/thomaschampagne/crypto-xor/issues",
-  "keywords": [],
+  "keywords": ["xor", "exclusive or", "encrypt", "decrypt", "cypher"],
   "sideEffects": false,
   "exports": {
     ".": {
