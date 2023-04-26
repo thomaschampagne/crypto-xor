@@ -117,12 +117,13 @@ pnpm run upgrade:libs
 
 Run common tasks all-in-once:
 
-- Dependencies install
+- Update to latest dependencies and install them
 - TypeScript check
 - Lint fixes
 - Tests
 - Build
-- Documentation
+- Update `README.md` table of content
+- Generate documentation
 
 
 ```bash

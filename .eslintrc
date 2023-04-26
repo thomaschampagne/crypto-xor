@@ -19,6 +19,7 @@
     "no-eval": "error",
     "func-style": "error",
     "prefer-arrow-callback": "error",
+    "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
